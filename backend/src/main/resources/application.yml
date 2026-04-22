@@ -6,7 +6,7 @@ spring:
     # 👇 TiDB Cloud JDBC URL + SSL 参数
     url: jdbc:mysql://gateway01.ap-southeast-1.prod.aws.tidbcloud.com:4000/test?useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true&useSSL=true&requireSSL=true&verifyServerCertificate=false
     username: 3UZwoUTDH31aB7V.root
-    password: gOp4IqQMO5ahwiOY  # 实际密码
+    password: ${DB_PASSWORD:default_password} # 实际密码gOp4IqQMO5ahwiOY 
     driver-class-name: com.mysql.cj.jdbc.Driver
 
 mybatis-plus:
