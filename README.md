@@ -52,3 +52,15 @@ DB_PORT=4000
 DB_NAME=test
 DB_USER=3UZwoUTDH31aB7V.root
 DB_PASSWORD=
+
+```
+#### 3. 启动服务
+```env
+# 1. 克隆项目
+git clone https://github.com/sayzwx/campus-buddy.git
+cd campus-buddy
+# 2. 一键启动（首次需等待镜像拉取与构建，约 3 分钟）
+docker compose up --build -d
+# 3. 访问应用
+# 前端页面：http://localhost
+# 后端 API： http://localhost:8080/api/users
