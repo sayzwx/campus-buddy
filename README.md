@@ -51,7 +51,7 @@ DB_HOST=gateway01.ap-southeast-1.prod.aws.tidbcloud.com
 DB_PORT=4000
 DB_NAME=test
 DB_USER=3UZwoUTDH31aB7V.root
-DB_PASSWORD=
+DB_PASSWORD=(ActualPasswordHere)
 
 ```
 #### 3. 启动服务
