@@ -1,0 +1,21 @@
+server:
+  port: 8080
+
+spring:
+  datasource:
+    # 👇 TiDB Cloud JDBC URL + SSL 参数
+    url: jdbc:mysql://gateway01.ap-southeast-1.prod.aws.tidbcloud.com:4000/test?useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true&useSSL=true&requireSSL=true&verifyServerCertificate=false
+    username: 3UZwoUTDH31aB7V.root
+    password: gOp4IqQMO5ahwiOY  # 实际密码
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+mybatis-plus:
+  configuration:
+    # 下划线转驼峰：user_name -> userName
+    map-underscore-to-camel-case: true
+    # 打印 SQL 日志（开发期方便调试）
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  global-config:
+    db-config:
+      # 逻辑删除字段名（配合 deleted 字段使用）
+      logic-delete-field: deleted
